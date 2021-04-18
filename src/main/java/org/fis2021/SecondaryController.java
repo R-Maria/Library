@@ -1,4 +1,4 @@
-package org.example;
+package org.fis2021;
 
 import java.io.IOException;
 import javafx.fxml.FXML;

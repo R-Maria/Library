@@ -1,4 +1,4 @@
-package org.example;
+package org.fis2021;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
