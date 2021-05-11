@@ -22,6 +22,18 @@
       </AnchorPane>
    </left>
    <right>
-      <ListView prefHeight="705.0" prefWidth="455.0" BorderPane.alignment="CENTER" />
+      <ScrollPane prefHeight="608.0" prefWidth="454.0" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane fx:id="bookContainer" layoutY="14.0" prefHeight="56.0" prefWidth="91.0">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
    </right>
 </BorderPane>

@@ -9,6 +9,4 @@ public class Order {
     private String address;
     private ArrayList<Book> books;
     private String state;
-
-
 }

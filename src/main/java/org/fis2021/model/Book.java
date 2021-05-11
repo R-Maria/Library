@@ -31,9 +31,14 @@ public class Book {
     public String getTitle() {
         return title;
     }
-
+    public void setTitle(String title) {
+        this.title = title;
+    }
     public String getAuthor() {
         return author;
+    }
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String getPublishingHouse() {
@@ -54,6 +59,10 @@ public class Book {
 
     public String getImageURL() {
         return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 
     public boolean equals(Object o) {

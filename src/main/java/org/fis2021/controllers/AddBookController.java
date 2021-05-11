@@ -13,7 +13,7 @@ import org.fis2021.services.BookService;
 
 import java.io.IOException;
 
-public class addBookController {
+public class AddBookController {
     @FXML
     private TextField titleTextField;
     @FXML
