@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.fis2021.services.BookService;
+import org.fis2021.controllers.CustomerMenu;
 import org.fis2021.services.FileSystemService;
 import org.fis2021.services.UserService;
 
