@@ -42,6 +42,16 @@ public class User {
     public void setRole(String role) {
         this.role = role;
     }
+    public String getName() {
+        return name;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
 
     public boolean equals(Object o) {
         if(this==o)
