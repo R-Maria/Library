@@ -45,7 +45,7 @@ public class LoginController {
             if (test)
             {
                 loginMessageLabel.setText("Success");
-                a.changeScene("Customer_menu.fxml");
+                a.changeScene("HomePage_Customer.fxml");
             }
         } catch(PasswordIncorrectException | EmptyFieldException e) {
             loginMessageLabel.setText(e.getMessage());

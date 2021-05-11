@@ -10,9 +10,8 @@
          <image>
             <Image url="@../../Images/Menu_c.jpg" />
          </image></ImageView>
-      <Button fx:id="PastOrder" onAction="#pastOrderButtonOnAction" layoutX="420.0" layoutY="149.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="110.0" text="Past Orders" />
-      <Button fx:id="Credentials" onAction="#credentialButtonOnAction" layoutX="420.0" layoutY="220.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="110.0" text="Credentials" />
-      <Button fx:id="Back" onAction="#backButtonOnAction" layoutX="545.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
-      <Button fx:id="LogOut" onAction="#logOutButtonOnAction" layoutX="431.0" layoutY="295.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="88.0" text="Log Out" />
+      <Button fx:id="PastOrder" layoutX="420.0" layoutY="149.0" mnemonicParsing="false" onAction="#pastOrderButtonOnAction" prefHeight="38.0" prefWidth="110.0" text="Past Orders" />
+      <Button fx:id="Credentials" layoutX="420.0" layoutY="220.0" mnemonicParsing="false" onAction="#credentialButtonOnAction" prefHeight="38.0" prefWidth="110.0" text="Credentials" />
+      <Button fx:id="Back" layoutX="545.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>
