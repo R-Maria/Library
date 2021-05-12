@@ -42,10 +42,13 @@ public class LoginController {
             UserService.checkFieldsLogin(usernameTextField.getText(),passwordField.getText(),roleBox.getSelectionModel());
             boolean test = UserService.checkUserAlreadyExist(usernameTextField.getText(), passwordField.getText(), roleBox.getValue());
 
-            if (test)
+            if (test && roleBox.getValue()=="Client")
             {
                 loginMessageLabel.setText("Success");
                 a.changeScene("HomePage_Customer.fxml");
+            }
+            else{
+                a.changeScene("adminHomePage.fxml");
             }
         } catch(PasswordIncorrectException | EmptyFieldException e) {
             loginMessageLabel.setText(e.getMessage());

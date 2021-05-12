@@ -17,6 +17,7 @@ public class HomePageCustomer {
     }
     public void orderButtonOnAction() throws IOException {
         App a = new App();
+        a.changeScene("bookDetails.fxml");
 
     }
 }
