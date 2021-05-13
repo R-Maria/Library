@@ -16,4 +16,14 @@ public class CustomerMenu {
     public void pastOrderButtonOnAction() throws IOException{
         App a = new App();
     }
+
+    public void logoutButtonOnAction() throws IOException {
+        App a = new App();
+        a.changeScene("login.fxml");
+    }
+
+    public void makeOrderButtonOnAction() throws  IOException {
+        App a = new App();
+        a.changeScene("makeOrder.fxml");
+    }
 }

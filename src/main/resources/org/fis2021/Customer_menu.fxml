@@ -13,5 +13,7 @@
       <Button fx:id="PastOrder" layoutX="420.0" layoutY="149.0" mnemonicParsing="false" onAction="#pastOrderButtonOnAction" prefHeight="38.0" prefWidth="110.0" text="Past Orders" />
       <Button fx:id="Credentials" layoutX="420.0" layoutY="220.0" mnemonicParsing="false" onAction="#credentialButtonOnAction" prefHeight="38.0" prefWidth="110.0" text="Credentials" />
       <Button fx:id="Back" layoutX="545.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
+      <Button fx:id="makeOrderButton" layoutX="420.0" layoutY="84.0" mnemonicParsing="false" onAction="#makeOrderButtonOnAction" prefHeight="38.0" prefWidth="110.0" text="Make order" />
+      <Button layoutX="420.0" layoutY="290.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="38.0" prefWidth="110.0" text="Log Out" />
    </children>
 </AnchorPane>

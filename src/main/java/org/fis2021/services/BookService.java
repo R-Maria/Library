@@ -6,15 +6,17 @@ import org.fis2021.exceptions.*;
 import org.fis2021.model.Book;
 
 import java.util.Calendar;
+import java.util.List;
 import java.util.Objects;
 
 import static org.fis2021.services.FileSystemService.getPathToFile;
 
 public class BookService {
     private static ObjectRepository<Book> bookRepository;
+    public static Nitrite database;
 
     public static void initDatabase() {
-        Nitrite database = Nitrite.builder()
+        database = Nitrite.builder()
                 .filePath(getPathToFile("libraryBooks.db").toFile())
                 .openOrCreate("test","test");
         bookRepository = database.getRepository(Book.class);
@@ -65,5 +67,17 @@ public class BookService {
         if(!test) {
             throw new WrongYearException();
         }
+    }
+
+    public static ObjectRepository<Book> getBookRepository() {
+        return bookRepository;
+    }
+
+    public static Nitrite getDatabase() {
+        return database;
+    }
+
+    public static List<Book> getAllBooks() {
+        return bookRepository.find().toList();
     }
 }
