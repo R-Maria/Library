@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis2021.controllers.BookDetails">
+   <children>
+      <ImageView fitHeight="182.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../Images/DetailsPage.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="218.0" fitWidth="210.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="247.0" layoutY="200.0" prefHeight="131.0" prefWidth="338.0" />
+      <Button fx:id="back" onAction="#backButtonlOnAction" layoutX="254.0" layoutY="329.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="91.0" text="Back" />
+   </children>
+</AnchorPane>

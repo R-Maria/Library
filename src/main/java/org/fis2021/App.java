@@ -32,8 +32,8 @@ public class App extends Application {
 
     public void changeScene(String fxml) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(fxml));
-        if(fxml.equals("login.fxml") || fxml.equals("registration.fxml") || fxml.equals("Customer_menu.fxml")) {
-            stage.setScene(new Scene(root, 600, 400));
+        if(fxml.equals("login.fxml") || fxml.equals("registration.fxml") || fxml.equals("Customer_menu.fxml") || fxml.equals("bookDetails.fxml")){
+            stage.setScene(new Scene(root,600,400));
             stage.getScene().setRoot(root);
         } else {
             stage.setScene(new Scene(root, 615, 705));
