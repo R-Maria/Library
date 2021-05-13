@@ -1,18 +1,21 @@
 package org.fis2021.services;
 
+import javafx.collections.ObservableList;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.fis2021.exceptions.EmptyFieldException;
 import org.fis2021.exceptions.WrongEmailException;
 import org.fis2021.exceptions.WrongPhoneNumberException;
-import org.fis2021.model.Book;
+import org.fis2021.model.Cart;
 import org.fis2021.model.Order;
+
 
 import java.util.ArrayList;
 
 import static org.fis2021.services.FileSystemService.getPathToFile;
 
 public class OrderService {
+    private static int id=0;
     private static ObjectRepository<Order> orderRepository;
 
     public static void initDatabase() {
@@ -20,6 +23,14 @@ public class OrderService {
                 .filePath(getPathToFile("libraryOrders.db").toFile())
                 .openOrCreate("test","test");
         orderRepository = database.getRepository(Order.class);
+    }
+    public static int getId() {
+        id=id+1;
+        return id;
+    }
+
+    public static void addOrder(String name, String email, String phoneNumber, String address, ArrayList<String> books) {
+        orderRepository.insert(new Order(name, email, phoneNumber, address, books));
     }
 
     public static void checkPhoneNumber(String number) throws WrongPhoneNumberException {
@@ -32,7 +43,7 @@ public class OrderService {
             throw new WrongEmailException();
     }
 
-    public static void checkFields(String name, String email, String phoneNumber, String address, String state, ArrayList<Book> books) throws EmptyFieldException {
+    public static void checkFields(String name, String email, String phoneNumber, String address, ArrayList<String> books) throws EmptyFieldException {
         if(name.isEmpty() || email.isEmpty() || phoneNumber.isEmpty() || address.isEmpty() || books.isEmpty())
             throw new EmptyFieldException();
     }

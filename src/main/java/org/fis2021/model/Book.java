@@ -1,5 +1,6 @@
 package org.fis2021.model;
 
+import javafx.collections.ObservableList;
 import org.dizitart.no2.objects.Id;
 
 public class Book {

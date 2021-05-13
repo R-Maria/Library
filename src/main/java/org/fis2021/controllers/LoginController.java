@@ -44,8 +44,15 @@ public class LoginController {
 
             if (test)
             {
-                loginMessageLabel.setText("Success");
-                a.changeScene("HomePage_Customer.fxml");
+                if(roleBox.getValue().equals("Client")) {
+                    loginMessageLabel.setText("Success");
+                    HomePageCustomer.setUsername(usernameTextField.getText());
+                    MakeOrderController.setUsername(usernameTextField.getText());
+                    a.changeScene("HomePage_Customer.fxml");
+                } else {
+                    loginMessageLabel.setText("Success");
+                    a.changeScene("adminHomePage.fxml");
+                }
             }
         } catch(PasswordIncorrectException | EmptyFieldException e) {
             loginMessageLabel.setText(e.getMessage());
