@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="705.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis2021.controllers.HomePageCustomer">
+   <children>
+      <ImageView fitHeight="712.0" fitWidth="620.0" layoutX="-2.0" layoutY="-2.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../Images/HomePage_Customer.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="Menu" layoutX="482.0" layoutY="26.0" mnemonicParsing="false" onAction="#menuButtonOnAction" prefHeight="34.0" prefWidth="100.0" text="Menu" />
+      <TextField layoutX="41.0" layoutY="26.0" prefHeight="34.0" prefWidth="429.0" promptText="Search Book" />
+      <TableView fx:id="booksTableView" layoutX="45.0" layoutY="87.0" prefHeight="589.0" prefWidth="538.0">
+        <columns>
+          <TableColumn fx:id="imageColumn" prefWidth="103.0" text="Image" />
+          <TableColumn fx:id="titleColumn" prefWidth="172.0" text="Title" />
+            <TableColumn fx:id="authorColumn" prefWidth="168.0" text="Author" />
+            <TableColumn fx:id="yearColumn" prefWidth="94.0" text="Year" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

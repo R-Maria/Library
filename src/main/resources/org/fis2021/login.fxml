@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ECECE7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis2021.controllers.LoginController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="240.0" BorderPane.alignment="CENTER">
+         <ImageView fx:id="logoImageView" fitHeight="434.0" fitWidth="266.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../Images/logo2.png" />
+         </ImageView>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="360.0" BorderPane.alignment="CENTER">
+         <ImageView fx:id="loginIcon" fitHeight="62.0" fitWidth="102.0" layoutX="143.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../Images/loginIcon.png" />
+         </ImageView>
+         <Label layoutX="36.0" layoutY="119.0" text="Username: " />
+         <TextField fx:id="usernameTextField" layoutX="119.0" layoutY="114.0" prefHeight="26.0" prefWidth="180.0" promptText="Enter email" />
+         <Label layoutX="36.0" layoutY="168.0" text="Password: " />
+         <PasswordField fx:id="passwordField" layoutX="119.0" layoutY="163.0" prefHeight="26.0" prefWidth="181.0" promptText="Enter password" />
+         <Button fx:id="loginButton" layoutX="133.0" layoutY="265.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="29.0" prefWidth="71.0" text="Login">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Button>
+         <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="358.0" prefHeight="16.0" prefWidth="334.0" textAlignment="CENTER" textFill="#da4444" />
+         <Label layoutX="36.0" layoutY="215.0" text="Role: " />
+         <ComboBox fx:id="roleBox" layoutX="118.0" layoutY="210.0" prefHeight="26.0" prefWidth="182.0" promptText="Select role" />
+         <Label fx:id="noAccount" alignment="CENTER" layoutX="68.0" layoutY="313.0" onMouseClicked="#noAccountOnAction" onMouseEntered="#noAccountMouseEntered" onMouseExited="#noAccountMouseExited" prefHeight="27.0" prefWidth="201.0" text="No account? Create one!" textFill="#149099" textOverrun="WORD_ELLIPSIS" />
+      </AnchorPane>
+   </right>
+</BorderPane>

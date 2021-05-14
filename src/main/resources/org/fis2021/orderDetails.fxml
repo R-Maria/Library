@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis2021.controllers.OrderDetailsController">
+   <children>
+      <Label layoutX="146.0" layoutY="103.0" text="Name: " />
+      <Label layoutX="146.0" layoutY="148.0" text="Email: " />
+      <Label layoutX="146.0" layoutY="187.0" text="Phone number:" />
+      <Label layoutX="146.0" layoutY="229.0" text="Address: " />
+      <Label layoutX="146.0" layoutY="270.0" text="Products: " />
+      <Label fx:id="nameLabel" layoutX="322.0" layoutY="104.0" text="Label" />
+      <Label fx:id="emailLabel" layoutX="322.0" layoutY="149.0" text="Label" />
+      <Label fx:id="phoneLabel" layoutX="322.0" layoutY="188.0" text="Label" />
+      <Label fx:id="addressLabel" layoutX="322.0" layoutY="230.0" text="Label" />
+      <Label fx:id="productsLabel" layoutX="322.0" layoutY="271.0" text="Label" />
+      <Label layoutX="146.0" layoutY="311.0" text="State: " />
+      <ComboBox fx:id="stateComboBox" layoutX="322.0" layoutY="306.0" prefWidth="150.0" />
+      <ImageView fitHeight="89.0" fitWidth="113.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../Images/orderDetailsIcon.jpg" />
+      </ImageView>
+      <Button fx:id="backButton" layoutX="495.0" layoutY="346.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
+      <Button fx:id="saveButton" layoutX="495.0" layoutY="306.0" mnemonicParsing="false" onAction="#saveButtonOnAction" text="Save" />
+   </children>
+</AnchorPane>
