@@ -42,10 +42,20 @@ public class LoginController {
             UserService.checkFieldsLogin(usernameTextField.getText(),passwordField.getText(),roleBox.getSelectionModel());
             boolean test = UserService.checkUserAlreadyExist(usernameTextField.getText(), passwordField.getText(), roleBox.getValue());
 
-            if (test)
+            if (test && roleBox.getValue()=="Client")
             {
-                loginMessageLabel.setText("Success");
-                a.changeScene("homePage.fxml");
+                if(roleBox.getValue().equals("Client")) {
+                    loginMessageLabel.setText("Success");
+                    HomePageCustomer.setUsername(usernameTextField.getText());
+                    MakeOrderController.setUsername(usernameTextField.getText());
+                    a.changeScene("HomePage_Customer.fxml");
+                } else {
+                    loginMessageLabel.setText("Success");
+                    a.changeScene("adminHomePage.fxml");
+                }
+            }
+            else{
+                a.changeScene("adminHomePage.fxml");
             }
         } catch(PasswordIncorrectException | EmptyFieldException e) {
             loginMessageLabel.setText(e.getMessage());

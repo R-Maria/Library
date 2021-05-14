@@ -5,8 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.fis2021.services.FileSystemService;
-import org.fis2021.services.UserService;
+import org.fis2021.services.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -19,6 +18,9 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         initDirectory();
+        OrderService.initDatabase();
+        CartService.initDatabase();
+        BookService.initDatabase();
         UserService.initDatabase();
         stage = primaryStage;
         primaryStage.setResizable(false);
@@ -29,7 +31,13 @@ public class App extends Application {
 
     public void changeScene(String fxml) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(fxml));
-        stage.getScene().setRoot(root);
+        if(fxml.equals("login.fxml") || fxml.equals("registration.fxml") || fxml.equals("Customer_menu.fxml") || fxml.equals("bookDetails.fxml") || fxml.equals("orderDetails.fxml")){
+            stage.setScene(new Scene(root,600,400));
+            stage.getScene().setRoot(root);
+        } else {
+            stage.setScene(new Scene(root, 615, 705));
+            stage.getScene().setRoot(root);
+        }
     }
 
     private void initDirectory() {
