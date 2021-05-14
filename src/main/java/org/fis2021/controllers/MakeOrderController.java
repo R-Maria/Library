@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.dizitart.no2.NitriteId;
 import org.dizitart.no2.objects.Cursor;
 import org.dizitart.no2.objects.ObjectFilter;
 import org.dizitart.no2.objects.ObjectRepository;
@@ -87,7 +88,8 @@ public class MakeOrderController {
             OrderService.checkFields(nameTextField.getText(),emailTextField.getText(),phoneTextField.getText(),addressTextArea.getText(),titles);
             OrderService.checkEmail(emailTextField.getText());
             OrderService.checkPhoneNumber(phoneTextField.getText());
-            OrderService.addOrder(nameTextField.getText(), phoneTextField.getText(), addressTextArea.getText(), productsTableColumn.getText(),titles);
+            String uniqueId = NitriteId.newId().toString();
+            OrderService.addOrder(uniqueId,nameTextField.getText(), emailTextField.getText(),phoneTextField.getText(), addressTextArea.getText(),titles);
             cartRepository.remove(ObjectFilters.ALL);
         } catch (EmptyFieldException | WrongEmailException | WrongPhoneNumberException e) {
             addBookMessageLabel.setText(e.getMessage());

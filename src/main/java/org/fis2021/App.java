@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.fis2021.services.*;
-import org.fis2021.controllers.CustomerMenu;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -32,7 +31,7 @@ public class App extends Application {
 
     public void changeScene(String fxml) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(fxml));
-        if(fxml.equals("login.fxml") || fxml.equals("registration.fxml") || fxml.equals("Customer_menu.fxml") || fxml.equals("bookDetails.fxml")){
+        if(fxml.equals("login.fxml") || fxml.equals("registration.fxml") || fxml.equals("Customer_menu.fxml") || fxml.equals("bookDetails.fxml") || fxml.equals("orderDetails.fxml")){
             stage.setScene(new Scene(root,600,400));
             stage.getScene().setRoot(root);
         } else {

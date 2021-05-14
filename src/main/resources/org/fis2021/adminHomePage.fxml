@@ -22,18 +22,12 @@
       </AnchorPane>
    </left>
    <right>
-      <ScrollPane prefHeight="608.0" prefWidth="454.0" BorderPane.alignment="CENTER">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
-               <children>
-                  <GridPane fx:id="bookContainer" layoutY="14.0" prefHeight="56.0" prefWidth="91.0">
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                  </GridPane>
-               </children>
-            </AnchorPane>
-        </content>
-      </ScrollPane>
+      <TableView fx:id="ordersTableView" prefHeight="705.0" prefWidth="473.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="117.0" text="Name" />
+          <TableColumn fx:id="productsColumn" prefWidth="237.0" text="Products" />
+            <TableColumn fx:id="stateColumn" prefWidth="100.0" text="State" />
+        </columns>
+      </TableView>
    </right>
 </BorderPane>

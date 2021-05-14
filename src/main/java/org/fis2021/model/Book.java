@@ -7,9 +7,9 @@ public class Book {
     @Id
     private String title;
     private String author;
+    private String year;
     private String publishingHouse;
     private String genre;
-    private String year;
     private String description;
     private String imageURL;
     private int count;
@@ -88,4 +88,11 @@ public class Book {
         return result;
     }
 
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
 }

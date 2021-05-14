@@ -1,12 +1,10 @@
 package org.fis2021.services;
 
-import javafx.collections.ObservableList;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.fis2021.exceptions.EmptyFieldException;
 import org.fis2021.exceptions.WrongEmailException;
 import org.fis2021.exceptions.WrongPhoneNumberException;
-import org.fis2021.model.Cart;
 import org.fis2021.model.Order;
 
 
@@ -29,8 +27,8 @@ public class OrderService {
         return id;
     }
 
-    public static void addOrder(String name, String email, String phoneNumber, String address, ArrayList<String> books) {
-        orderRepository.insert(new Order(name, email, phoneNumber, address, books));
+    public static void addOrder(String id,String name, String email, String phoneNumber, String address, ArrayList<String> books) {
+        orderRepository.insert(new Order(id, name, email, phoneNumber, address, books));
     }
 
     public static void checkPhoneNumber(String number) throws WrongPhoneNumberException {
@@ -46,5 +44,9 @@ public class OrderService {
     public static void checkFields(String name, String email, String phoneNumber, String address, ArrayList<String> books) throws EmptyFieldException {
         if(name.isEmpty() || email.isEmpty() || phoneNumber.isEmpty() || address.isEmpty() || books.isEmpty())
             throw new EmptyFieldException();
+    }
+
+    public static ObjectRepository<Order> getOrderRepository() {
+        return orderRepository;
     }
 }
