@@ -42,7 +42,7 @@ public class LoginController {
             UserService.checkFieldsLogin(usernameTextField.getText(),passwordField.getText(),roleBox.getSelectionModel());
             boolean test = UserService.checkUserAlreadyExist(usernameTextField.getText(), passwordField.getText(), roleBox.getValue());
 
-            if (test && roleBox.getValue()=="Client")
+            if (test && roleBox.getValue().equals("Client"))
             {
                 if(roleBox.getValue().equals("Client")) {
                     loginMessageLabel.setText("Success");

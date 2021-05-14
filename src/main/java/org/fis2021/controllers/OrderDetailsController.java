@@ -33,8 +33,6 @@ public class OrderDetailsController {
     private Label productsLabel;
     @FXML
     private ComboBox<String> stateComboBox;
-    @FXML
-    private Button saveButton;
 
     public static void setData(String name, String email, String phone, String address, ArrayList<String> products, String state) {
        OrderDetailsController.name = name;
