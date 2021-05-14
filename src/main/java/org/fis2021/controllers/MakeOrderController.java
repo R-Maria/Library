@@ -8,7 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.dizitart.no2.NitriteId;
 import org.dizitart.no2.objects.Cursor;
-import org.dizitart.no2.objects.ObjectFilter;
+
 import org.dizitart.no2.objects.ObjectRepository;
 import org.dizitart.no2.objects.filters.ObjectFilters;
 import org.fis2021.App;
@@ -32,19 +32,19 @@ public class MakeOrderController {
     private static ObservableList<Cart> books;
 
     @FXML
-    public TextField nameTextField;
+    private TextField nameTextField;
     @FXML
-    public TextField emailTextField;
+    private TextField emailTextField;
     @FXML
-    public TextField phoneTextField;
+    private TextField phoneTextField;
     @FXML
-    public TextArea addressTextArea;
+    private TextArea addressTextArea;
     @FXML
-    public TableView<Cart> productsTableView;
+    private TableView<Cart> productsTableView;
     @FXML
-    public TableColumn<Cart,String> productsTableColumn;
+    private TableColumn<Cart,String> productsTableColumn;
     @FXML
-    public Label addBookMessageLabel;
+    private Label addBookMessageLabel;
 
     @FXML
     public void initialize() {
@@ -80,9 +80,6 @@ public class MakeOrderController {
             ArrayList<String> titles = new ArrayList<>();
             for(int i=0; i<productsTableView.getItems().size(); i++) {
                 titles.add(productsTableView.getItems().get(i).getBook());
-            }
-            for(int i=0; i<productsTableView.getItems().size(); i++) {
-                System.out.println(titles.get(i));
             }
             addBookMessageLabel.setText("Order placed successfully!");
             OrderService.checkFields(nameTextField.getText(),emailTextField.getText(),phoneTextField.getText(),addressTextArea.getText(),titles);

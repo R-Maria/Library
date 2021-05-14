@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="615.0" style="-fx-background-color: #ECECE7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis2021.controllers.StockController">
+    <left>
+        <AnchorPane prefHeight="705.0" prefWidth="123.0" style="-fx-background-color: #d5d5cb;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="81.0" fitWidth="82.0" layoutX="21.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../Images/adminIcon.png" />
+                </ImageView>
+                <Button fx:id="seeOrdersButton" layoutX="18.0" layoutY="191.0" mnemonicParsing="false" onAction="#seeOrdersButtonOnAction" text="See orders" />
+                <Button fx:id="addStockButton" layoutX="19.0" layoutY="245.0" mnemonicParsing="false" onAction="#addStockButtonOnAction" text="Add stock" />
+                <Button fx:id="logOutButton" layoutX="29.0" layoutY="300.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" text="LogOut" />
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <TableView fx:id="stockTableView" prefHeight="705.0" prefWidth="498.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="titleColumn" prefWidth="132.0" text="Title" />
+                <TableColumn fx:id="authorColumn" prefWidth="141.0" text="Author" />
+            <TableColumn fx:id="houseColumn" prefWidth="135.0" text="Publishing house" />
+            <TableColumn fx:id="yearColumn" prefWidth="46.0" text="Year" />
+                <TableColumn fx:id="countColumn" prefWidth="37.0" text="Nr" />
+            </columns>
+        </TableView>
+    </right>
+</BorderPane>

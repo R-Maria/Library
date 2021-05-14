@@ -10,7 +10,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.dizitart.no2.objects.Cursor;
 import org.dizitart.no2.objects.ObjectRepository;
-import org.dizitart.no2.objects.filters.ObjectFilters;
 import org.fis2021.App;
 import org.fis2021.model.Book;
 import org.fis2021.services.BookService;
@@ -29,15 +28,15 @@ public class HomePageCustomer {
     public static int id=0;
 
     @FXML
-    public TableView<Book> booksTableView;
+    private TableView<Book> booksTableView;
     @FXML
-    public TableColumn<Book,String> titleColumn;
+    private TableColumn<Book,String> titleColumn;
     @FXML
-    public TableColumn<Book,String> authorColumn;
+    private TableColumn<Book,String> authorColumn;
     @FXML
-    public TableColumn<Book, String> imageColumn;
+    private TableColumn<Book, String> houseColumn;
     @FXML
-    public TableColumn<Book,String> yearColumn;
+    private TableColumn<Book,String> yearColumn;
 
     @FXML
     public void initialize() {
@@ -48,7 +47,7 @@ public class HomePageCustomer {
             titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
             authorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
             yearColumn.setCellValueFactory(new PropertyValueFactory<>("year"));
-            imageColumn.setCellValueFactory(new PropertyValueFactory<>("imageURL"));
+            houseColumn.setCellValueFactory(new PropertyValueFactory<>("publishingHouse"));
             booksTableView.setItems(books);
 
             booksTableView.setRowFactory(e -> {

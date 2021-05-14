@@ -35,7 +35,7 @@ public class AddBookController {
 
     public void addBookButtonOnAction() {
         try {
-            addBookMessageLabel.setText("Succes!");
+            addBookMessageLabel.setText("Success!");
 
             BookService.checkFieldsAddBook(titleTextField.getText(), authorTextField.getText(), houseTextField.getText(), genreTextField.getText(), yearTextField.getText(),
                     imageTextField.getText(), descriptionTextArea.getText(), countTextField.getText());
