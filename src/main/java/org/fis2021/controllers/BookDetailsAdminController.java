@@ -35,7 +35,7 @@ public class BookDetailsAdminController {
 
     public void backButtonOnAction() throws IOException {
         App a = new App();
-        a.changeScene("adminHomePage.fxml");
+        a.changeScene("stock.fxml");
     }
 
     public static void setData(String title, String author, String publishingHouse, String genre, String year, String description, int count) {

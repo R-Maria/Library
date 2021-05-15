@@ -23,7 +23,7 @@
         <Button fx:id="backButton" layoutX="55.0" layoutY="346.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
         <Button fx:id="saveButton" layoutX="528.0" layoutY="346.0" mnemonicParsing="false" onAction="#saveButtonOnAction" text="Save" />
       <Label layoutX="161.0" layoutY="242.0" text="Description: " />
-      <Label fx:id="descriptionLabel" layoutX="335.0" layoutY="242.0" prefHeight="89.0" prefWidth="243.0" text="Label" />
+      <Label fx:id="descriptionLabel" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="335.0" layoutY="242.0" prefHeight="89.0" prefWidth="243.0" text="Label" />
       <Label fx:id="countLabel" layoutX="335.0" layoutY="351.0" text="Label" />
       <TextField fx:id="countTextField" layoutX="391.0" layoutY="346.0" prefHeight="26.0" prefWidth="119.0" promptText="new book count" />
     </children>

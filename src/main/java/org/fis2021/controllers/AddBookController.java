@@ -41,8 +41,8 @@ public class AddBookController {
                     imageTextField.getText(), descriptionTextArea.getText(), countTextField.getText());
             BookService.checkCount(countTextField.getText());
             BookService.checkYear(yearTextField.getText());
-            BookService.addUser(titleTextField.getText(), authorTextField.getText(), houseTextField.getText(), genreTextField.getText(), yearTextField.getText(),
-                    imageTextField.getText(), descriptionTextArea.getText(), Integer.parseInt(countTextField.getText()));
+            BookService.addBook(titleTextField.getText(), authorTextField.getText(), houseTextField.getText(), genreTextField.getText(), yearTextField.getText(),
+                    descriptionTextArea.getText(), imageTextField.getText(), Integer.parseInt(countTextField.getText()));
         } catch (EmptyFieldException | BookAlreadyAdded | WrongCountException | WrongYearException e) {
             addBookMessageLabel.setText(e.getMessage());
         }
