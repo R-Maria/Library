@@ -22,7 +22,7 @@ public class BookService {
         bookRepository = database.getRepository(Book.class);
     }
 
-    public static void addUser(String title, String author, String publishingHouse, String genre, String year, String description, String imageURL, int count) throws BookAlreadyAdded {
+    public static void addBook(String title, String author, String publishingHouse, String genre, String year, String description, String imageURL, int count) throws BookAlreadyAdded {
         checkUserDoesNotAlreadyExist(title, author, publishingHouse, year);
         bookRepository.insert(new Book(title, author, publishingHouse, genre, year, description, imageURL, count));
     }
